@@ -37,10 +37,28 @@
  */
 - (void)testArrayProtect
 {
-    NSArray *array = @[];
+    NSString *string;
+    NSArray *array = @[string, @"1", @"2"];
     
-    array[3];
-    [array objectAtIndex:7];
+    NSArray *array0 = @[];
+    array0[4];
+    [array0 objectAtIndex:4];
+    [array0 objectAtIndexedSubscript:4];
+
+    NSArray *array1 = @[@"1"];
+    array1[4];
+    [array1 objectAtIndex:4];
+    [array1 objectAtIndexedSubscript:4];
+
+    NSArray *array2 = @[@"1", @"2"];
+    array2[4];
+    [array2 objectAtIndex:4];
+    [array2 objectAtIndexedSubscript:4];
+
+    NSArray *array3 = @[@"1", @"2", @"3"];
+    array3[4];
+    [array3 objectAtIndex:4];
+    [array3 objectAtIndexedSubscript:4];
 }
 
 /**
@@ -50,14 +68,13 @@
 {
     NSString *string = nil;
     
-    NSMutableArray *marray = @[@"a", @"b"].mutableCopy;
-    NSMutableArray *marray2 = [NSMutableArray arrayWithObjects:string, nil];
+    NSMutableArray *marray = @[string].mutableCopy;
+    
+    marray = @[@"a", @"b"].mutableCopy;
     
     marray[3];
     [marray objectAtIndex:7];
-    [marray addObject:string];
     [marray removeObjectAtIndex:7];
-    [marray removeObject:@"c"];
     [marray insertObject:@"c" atIndex:7];
     [marray replaceObjectAtIndex:9 withObject:@"c"];
 }
@@ -69,9 +86,9 @@
 {
     NSString *string = nil;
     
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:string, string, nil];
-    
-    [dictionary objectForKey:string];
+    NSDictionary *dictionary = @{
+        string : string
+    };
 }
 
 /**
@@ -81,9 +98,14 @@
 {
     NSString *string = nil;
     
-    NSMutableDictionary *mdictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:string, string, nil];
+    NSMutableDictionary *mdictionary = @{
+        string : string
+    }.mutableCopy;
     
-    [mdictionary objectForKey:string];
+    mdictionary = @{
+        @"string" : @"string"
+    }.mutableCopy;
+    
     [mdictionary setObject:string forKey:string];
     mdictionary[string] = string;
     [mdictionary removeObjectForKey:string];
@@ -94,10 +116,11 @@
  */
 - (void)testStringProtect
 {
-    NSString *string = nil;
+    NSString *string = @"abc";
     
-    [string rangeOfString:@"abc"];
-    
+    NSString *rangOfString;
+    [string rangeOfString:rangOfString];
+
     [string substringFromIndex:8];
     [string substringToIndex:8];
     [string substringWithRange:NSMakeRange(8, 8)];
@@ -108,9 +131,10 @@
  */
 - (void)testMutableStringProtect
 {
-    NSString *string = nil;
+    NSMutableString *string = @"abc".mutableCopy;
     
-    [string rangeOfString:@"abc"];
+    NSString *rangOfString;
+    [string rangeOfString:rangOfString];
     
     [string substringFromIndex:8];
     [string substringToIndex:8];

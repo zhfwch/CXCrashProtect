@@ -21,6 +21,12 @@
         
         [self exchangeInstanceMethod:__NSCFString originalSel:@selector(rangeOfString:options:range:locale:) swizzledSel:@selector(cx_rangeOfString:options:range:locale:)];
         
+        [self exchangeInstanceMethod:__NSCFString originalSel:@selector(substringToIndex:) swizzledSel:@selector(cx_substringToIndex:)];
+        
+        [self exchangeInstanceMethod:__NSCFString originalSel:@selector(substringFromIndex:) swizzledSel:@selector(cx_substringFromIndex:)];
+        
+        //substringWithRange:
+        [self exchangeInstanceMethod:__NSCFString originalSel:@selector(substringWithRange:) swizzledSel:@selector(cx_substringWithRange:)];
     });
 }
 
@@ -39,6 +45,51 @@
     }
     @finally {
         return range;
+    }
+}
+
+- (NSString *)cx_substringFromIndex:(NSUInteger)index {
+    
+    NSString *subString = nil;
+    
+    @try {
+        subString = [self cx_substringFromIndex:index];
+    }
+    @catch (NSException *exception) {
+        [exception print];
+    }
+    @finally {
+        return subString;
+    }
+}
+
+- (NSString *)cx_substringToIndex:(NSUInteger)index {
+    
+    NSString *subString = nil;
+    
+    @try {
+        subString = [self cx_substringToIndex:index];
+    }
+    @catch (NSException *exception) {
+        [exception print];
+    }
+    @finally {
+        return subString;
+    }
+}
+
+- (NSString *)cx_substringWithRange:(NSRange)range {
+    
+    NSString *subString = nil;
+    
+    @try {
+        subString = [self cx_substringWithRange:range];
+    }
+    @catch (NSException *exception) {
+        [exception print];
+    }
+    @finally {
+        return subString;
     }
 }
 
