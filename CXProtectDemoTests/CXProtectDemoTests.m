@@ -149,6 +149,14 @@
     [[NSAttributedString alloc] initWithString:string attributes:nil];
 }
 
+- (void)testMutableAttributedStringProtect
+{
+    NSString *string = nil;
+    
+    [[NSMutableAttributedString alloc] initWithString:string];
+    [[NSMutableAttributedString alloc] initWithString:string attributes:nil];
+}
+
 /**
  unrecognized selector 防护
  

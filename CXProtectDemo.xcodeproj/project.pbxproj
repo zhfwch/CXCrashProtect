@@ -25,6 +25,7 @@
 		3A008EE721BF6CF1008D2B19 /* NSException+CXProtectLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A008EDA21BF6CF1008D2B19 /* NSException+CXProtectLog.m */; };
 		3A008EE821BF6CF1008D2B19 /* NSMutableDictionary+CXProtect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A008EDD21BF6CF1008D2B19 /* NSMutableDictionary+CXProtect.m */; };
 		3A3E56A721C3A59C0071B176 /* NSAttributedString+CXProtect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E56A621C3A59C0071B176 /* NSAttributedString+CXProtect.m */; };
+		E82224FC24108A4A00693AD9 /* NSMutableAttributedString+CXProtect.m in Sources */ = {isa = PBXBuildFile; fileRef = E82224FB24108A4A00693AD9 /* NSMutableAttributedString+CXProtect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		3A008EDE21BF6CF1008D2B19 /* NSMutableString+CXProtect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+CXProtect.h"; sourceTree = "<group>"; };
 		3A3E56A521C3A59C0071B176 /* NSAttributedString+CXProtect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CXProtect.h"; sourceTree = "<group>"; };
 		3A3E56A621C3A59C0071B176 /* NSAttributedString+CXProtect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CXProtect.m"; sourceTree = "<group>"; };
+		E82224FA24108A4A00693AD9 /* NSMutableAttributedString+CXProtect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CXProtect.h"; sourceTree = "<group>"; };
+		E82224FB24108A4A00693AD9 /* NSMutableAttributedString+CXProtect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CXProtect.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				3A008ED421BF6CF1008D2B19 /* NSMutableString+CXProtect.m */,
 				3A3E56A521C3A59C0071B176 /* NSAttributedString+CXProtect.h */,
 				3A3E56A621C3A59C0071B176 /* NSAttributedString+CXProtect.m */,
+				E82224FA24108A4A00693AD9 /* NSMutableAttributedString+CXProtect.h */,
+				E82224FB24108A4A00693AD9 /* NSMutableAttributedString+CXProtect.m */,
 				3A008EDB21BF6CF1008D2B19 /* NSObject+SelectorProtect.h */,
 				3A008ED321BF6CF1008D2B19 /* NSObject+SelectorProtect.m */,
 				3A008ECF21BF6CF1008D2B19 /* NSException+CXProtectLog.h */,
@@ -277,6 +282,7 @@
 				3A008EE821BF6CF1008D2B19 /* NSMutableDictionary+CXProtect.m in Sources */,
 				3A008E8621BF69F2008D2B19 /* AppDelegate.m in Sources */,
 				3A008EE521BF6CF1008D2B19 /* NSArray+CXProtect.m in Sources */,
+				E82224FC24108A4A00693AD9 /* NSMutableAttributedString+CXProtect.m in Sources */,
 				3A008EE021BF6CF1008D2B19 /* NSString+CXProtect.m in Sources */,
 				3A008EE721BF6CF1008D2B19 /* NSException+CXProtectLog.m in Sources */,
 				3A008EE121BF6CF1008D2B19 /* NSDictionary+CXProtect.m in Sources */,
